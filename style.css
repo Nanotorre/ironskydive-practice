@@ -6,11 +6,11 @@
 .nav-bar {
   background: rgb(25, 33, 41);
   color: white;
-  padding: 14px 0px 14px;
+  padding: 14px 0;
   height: 40px;
 }
 
-.nav-bar-item {  
+.nav-bar a {  
   color: white;
   text-decoration: none;
   font-size: 2em; 
@@ -19,51 +19,50 @@
 .nav-bar-ul {
   width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.nav-bar-li {
+.nav-bar-ul li {
   list-style-type: none;
-  text-align: center;
-  float: left;
-  width: 33%;
 }
 
 .header {
   background: url("https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/ironhack-skydive-background.jpg") 0 0 no-repeat;
   background-size: cover;
   height: 650px;
-  padding: 50px 0 0 0;
+  padding-top: 50px;
   position: relative;
-}
-
-.col {
-  float: left;
-}
-.col-3 {
-  width: 30%;
-}
-.col-middle {
-  margin: 0 5%;
-}
-.clearfix {
-  clear: both;
 }
 
 #subtitle {
   color: white;
   text-shadow: #020819 6px -3px 7px;
 }
-.quote {
+.header .quote {
   font-size: 2.5em;
   position: absolute;
   bottom: 15vh;
   left: 10%;
 }
 
+#general-information {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 75px 0;  
+}
+
+#general-information .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 370px;
 }
 
 body {
@@ -97,8 +96,8 @@ h3 {
 
 h4 {
   font-size: 1.5em;
-  letter-spacing: 1.2px;
-  margin: 0 0 15px 0;
+  letter-spacing: 0.4px;
+  margin-bottom: 15px;
 }
 
 h5 {
@@ -128,8 +127,8 @@ h5 {
   display: block;
   width: 150px;
   margin: 40px auto 0 auto;
-  padding: 14px 20px 14px 20px;
-  border: 2px color: rgba (0, 0, 0, 0.2) solid;
+  padding: 14px 20px;
+  border: 2px rgba (0, 0, 0, 0.2) solid;
 }
 
 .service-box {
@@ -148,21 +147,49 @@ h5 {
     width: 125px;
 } 
 
+#structure > div {
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+
+
+#team {
+  padding: 75px 0;
+  margin: 0 auto;
+}
+
+#team > div {
+  display: flex;
+  justify-content: space-evenly;    
+}
+
+#team > div > article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 #team .section-text {
-  font-size: 1.9em; 
+  font-size: 1.9em;
   text-align: center;
-  width: 60%;
-  margin: 10px auto;
 }
 
 #team .member-name {
   font-size: 1.5em;
   font-weight: 700;
-  display: block;
-  text-align: center;
 }
 
-#team .hr {
+#team img {
+  width: 250px;
+  height: 180px;
+}
+
+#team hr {
   margin: 20px auto 30px auto;
   width: 40%;
 }
@@ -171,46 +198,73 @@ h5 {
   text-align: center;
   font-size: 1.9em; 
   margin-bottom: 25px;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .address {
   font-style: normal;
   font-size: 0.8em;
-  margin: 0 0 30px;
+  margin-bottom: 30px;
 }
 
-.links {
+.footer ul {
+  list-style: none;
+}
+
+.footer a {
+  color: rgb(67, 163, 230);
+  text-decoration: none;
+}
+.link {
   color: rgb(67, 163, 230);
   text-decoration: none;
 }
 
 .map-frame {
     height: 375px;
-    float: right;
-    width: 60%;
-    
+    width: 60%; 
 }
 
 .follow-li {
   list-style-type: none;
 }
 
-.col-2 {
-  width: 35%; 
-}
-    
-.bor {
- border: 3px solid yellow;
-}
-
 .schedule-table { 
   margin: 0 auto 40px auto;
   font-size: 1.5em;
-  
-
+  text-align: center;
 }
 
 .border-t th, td {
   border-bottom: 1px solid black;
   padding: 5px 10px;
+}
+
+.slot-form-container {
+  width: 40%;
+  margin: 18px auto 0 auto;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.slot-form-container label {
+  line-height: 15px;
+  margin: 5px;
+} 
+
+.slot-form-container input, select {
+  height: 20px;
+  outline: none;
+  padding: 3px;
+  width: 100%;
+}
+
+.slot-form-container button {
+  border: 1px solid black;
+  background-color: white;
+  padding: 9px;
+  margin-top: 15px;
 }
